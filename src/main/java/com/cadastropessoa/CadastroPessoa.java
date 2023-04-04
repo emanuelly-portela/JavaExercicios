@@ -6,10 +6,9 @@ public class CadastroPessoa {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         System.out.print("Digite o número de pessoas a serem cadastradas: ");
         int numPessoas = input.nextInt();
-               
+        
         Pessoa[] pessoas = new Pessoa[numPessoas];
         for (int i = 0; i < numPessoas; i++) {
             input.nextLine(); // Limpar scanner
@@ -27,6 +26,7 @@ public class CadastroPessoa {
             pessoas[i] = new Pessoa(nome, idade, endereco);
         }
 
+        
         System.out.println("\nCadastro de Pessoas:");
         for (int i = 0; i < numPessoas; i++) {
             System.out.println(" Nome = " + pessoas[i].nome); 
